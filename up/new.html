@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>最新地址发布页 请保存</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: inherit, Sora, system-ui, sans-serif, Avenir, Helvetica, Arial, sans-serif !important;
+            max-width: 100vw;
+            width: 100%;
+        }
+
+        body {
+            height: auto;
+            margin: 0;
+            font-size: 14px;
+            background: none;
+        }
+
+        ul, ol, li, dl, dt, dd {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html {
+            background: linear-gradient(180deg, #000 .38%, #110239 107.78%);
+        }
+
+        .mt10 {
+            margin-top: 15px !important;
+        }
+
+        .app-html {
+            padding: 10px 10px 0 10px;
+            background: none;
+        }
+
+        .app-body {
+            max-width: 840px;
+            margin: 20px auto 30px auto;
+            padding: 20px;
+            background: #000;
+            border-radius: 20px;
+            border: 1px solid #0ff2;
+            box-shadow: 0 0 20px #00fff7aa;
+        }
+
+        .app-body .xia {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .app-html .h1 {
+            text-align: center;
+            color: #000;
+            margin-bottom: 40px;
+            font-size: 40px;
+            text-shadow: 0 0 5px #00faff,
+            0 0 10px #00faff,
+            0 0 20px #00faff;
+            animation: neonFlash 2s infinite alternate;
+        }
+
+        .app-html .h1 strong {
+            font-size: 54px;
+            line-height: 40px;
+            display: block;
+            color: #fff;
+        }
+
+        .app-html .h1 span {
+            background: linear-gradient(135deg, #ffc400 .38%, #ffea00 107.78%);
+            padding: 3px 20px;
+            color: #8a2e00;
+            font-size: 18px;
+            line-height: 30px;
+            height: 30px;
+            vertical-align: middle;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .app-html .h1 span i {
+            display: block;
+            border-radius: 17px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            padding: 0 10px;
+            color: #330e00;
+            font-style: normal;
+            background: #fefff4;
+        }
+
+        .cc .a {
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: 8px;
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 5px solid #00ffe6;
+            border-right: 5px solid #00ffe6;
+            border-radius: 16px;
+            background: #121212e0;
+            box-shadow: 0 0 25px #00ffee44;
+        }
+
+        .cc .a a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #00ffe6;
+            background: #00051b;
+        }
+
+        .cc .a-new {
+            background: #00051b;
+        }
+
+        .cc .a-new a {
+            color: #00ffe6;
+            font-weight: 600;
+        }
+
+        .c1 p {
+            text-align: center;
+            color: #ccc;
+            line-height: 22px;
+            margin: 3px 0;
+            font-size: 15px;
+        }
+    </style>
+
+    <script src="jquery.min.js"></script>
+    <script src="crypto-js.min.js"></script>
+</head>
+<body>
+
+<div class="app-html">
+    <div class="h1">
+        <span>最新地址发布页 请保存</span>
+        <strong>木瓜影视</strong>
+    </div>
+    <div class="app-body">
+        <div class="xia">👇️👇️👇️👇️👇️</div>
+        <div class="cc c1">
+
+            <div class="a a-new"><a href="#" class="t" target="_self">🟢 最新地址【点击进入网站 → 】👈️</a></div>
+            <div class="a"><a href="#" class="t" target="_self">🟢 最新地址 备用① 👈️</a></div>
+            <div class="a"><a href="#" class="t" target="_self">🟢 最新地址 备用② 👈️</a></div>
+
+            <p class="mt10">部分浏览器可能会屏蔽本站</p>
+            <p>建议每次浏览都<strong>先打开此发布页</strong>，再由发布页进入，</p>
+            <p>以确保每次都能正常浏览。</p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function decryptUrl(encryptedUrl) {
+        var decrypted = CryptoJS.AES.decrypt(
+            encryptedUrl,
+            CryptoJS.enc.Utf8.parse('WCfuX9HvUt2NuS7lQxiPqGqGOmGVSmxh'),
+            {
+                mode: CryptoJS.mode.ECB,
+                padding: CryptoJS.pad.Pkcs7
+            }
+        );
+        return CryptoJS.enc.Utf8.stringify(decrypted);
+    }
+
+    function randomstring(length) {
+        let chars = 'abcdefghijklmnopqrstuvwxyz';
+        let result = '';
+
+        for (let i = 0; i < length; i++) {
+            result += chars[Math.floor(Math.random() * chars.length)];
+        }
+        return result;
+    }
+
+    function shouldHideLinks() {
+        var userAgent = navigator.userAgent.toLowerCase();
+        var forbidden = ["qqtheme", "micromessenger", "curl", "wget", "bot", "scrapy", "axios", "okhttp", "python", "java", "go-http-client"];
+        return forbidden.some(str => userAgent.includes(str));
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (shouldHideLinks()) {
+            document.querySelectorAll('.a').forEach(el => el.style.display = 'none');
+            var c1Section = document.querySelector('.c1');
+            if (c1Section) {
+                c1Section.style.display = 'none';
+            }
+        } else {
+            var urlbody = 'FnzHchcFRmKfDQbLu4WuuMarUF5ubxC+VSHi3GdBOJk=';
+            var anchorTags = document.querySelectorAll('.t');
+            var urlArray = decryptUrl(urlbody).split(',');
+            anchorTags.forEach((aTag, index) => {
+                if (urlArray[index]) {
+                    aTag.href = 'https://' + randomstring(6) + '.' + urlArray[index] + '/' + randomstring(3) + '/' + randomstring(3) + '.html';
+                    aTag.classList.remove('hidden');
+                }
+            });
+        }
+    });
+
+</script>
+
+</body>
+</html>
